@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<link href="https://fonts.googleapis.com/css?family=Bungee+Hairline" rel="stylesheet">
+
+<script>
+
+function add(text){
+    var TheTextBox = document.getElementById("input");
+    TheTextBox.value = TheTextBox.value + text;
+}
+
+function calculate(){
+	var CalculateValue = document.getElementById("input").value;
+	var FinalCalc = eval(CalculateValue);
+	var TheTextBox = document.getElementById("input");
+    TheTextBox.value = FinalCalc;
+}
+
+</script>
+
+<style type="text/css">
+  * {
+    font-family: 'Bungee Hairline', monospace;
+    font-size:25px;
+  }
+  body {
+    background-color: #f2f2f2;
+  }
+	#calculator {
+		width:300px;
+    height:400px;
+    margin:100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: #ccccff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 10px 10px 5px #888888;
+	}
+	.row {
+		display:block;
+		margin:auto;
+		width:100%;
+	}
+	button {
+		width:50px;
+		height:50px;
+		margin: 10px;
+    background-color: white;
+    border:none;
+    border-radius: 3px;
+	}
+	input {
+		width:194px;
+		height:48px;
+    margin:10px;
+    border:none;
+    border-radius: 3px;
+	}
+</style>
+
+</head>
+
+<body>
+
+<div id="calculator">
+
+	<button id="c" onClick="location.reload()">C</button>
+	<input type="text" value="" id="input"></input>
+
+	<div class="row">
+		<button id="9" onClick="add(9)">9</button>
+		<button id="8" onClick="add(8)">8</button>
+		<button id="7" onClick="add(7)">7</button>
+		<button id="divide" onClick="add('/')">/</button>
+	</div>
+
+	<div class="row">
+		<button id="6" onClick="add(6)">6</button>
+		<button id="5" onClick="add(5)">5</button>
+		<button id="4" onClick="add(4)">4</button>
+		<button id="multiple" onClick="add('*')">*</button>
+	</div>
+
+	<div class="row">
+		<button id="3" onClick="add(3)">3</button>
+		<button id="2" onClick="add(2)">2</button>
+		<button id="1" onClick="add(1)">1</button>
+		<button id="subtract" onClick="add('-')">-</button>
+	</div>
+
+	<div class="row">
+	<button id="0" onClick="add(0)">0</button>
+	<button id="." onClick="add('.')">.</button>
+	<button id="=" onClick="calculate()">=</button>
+	<button id="add" onClick="add('+')">+</button>
+
+	</div>
+
+</div>
+
+</body>
